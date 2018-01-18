@@ -1,0 +1,32 @@
+/*<!-- Shannon Hanlon
+shannonhanlon17@gmail.com
+Assignment 0
+Start to My Website -->*/
+/* stylesheet */
+<style>
+.mainheader {
+	font-family: verdana;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	color: navy;
+	background-color: navy
+	border: 3px groove #FFFF33;
+}
+<style>
+
+body {
+ background-color: #333300;
+ color: #FFFFFF;
+}
+h1 {
+ color: navy;
+ text-align: center;
+ font: italic 200% fantasy;
+}
+p {
+ background-color: #FFFF33;
+ color: #333300;
+ text-align: right;
+ border: 3px groove #FFFF33;
+}
