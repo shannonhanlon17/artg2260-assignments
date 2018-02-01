@@ -1,7 +1,8 @@
 /*ARTG2260: Programming Basics
 Shannon Hanlon
 shannonhanlon17@gmail.com
-Exercise 2: Nested Iteration*/
+Exercise 2: Nested Iteration
+Fancy Tile*/
 function setup() {
 	createCanvas(400, 400);
 	background(255);
