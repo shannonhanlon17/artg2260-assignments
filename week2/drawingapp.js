@@ -6,11 +6,13 @@ var weight = 2;//button dimensions
 var buttonWidth = 40;
 var buttonHeight = 20;
 var drawRect = true;
+var drawing = [];
 
 function setup() {
-	createCanvas(400, 400);
+	var c = createCanvas(400, 400);
 	background(212, 216, 215);
 	stroke(20);
+	saveCanvas('myCanvas', 'jpg');
 }
 
 function draw (){
@@ -19,6 +21,7 @@ function draw (){
 
 	if (mouseIsPressed == true) {
 		if (drawRect == true) {
+			rect(mouseX, mouseY, weight, weight);
 			} else {
 				strokeWeight(weight);
 				line (mouseX, mouseY, pmouseX, pmouseY);
