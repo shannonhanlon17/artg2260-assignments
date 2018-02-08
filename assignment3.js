@@ -21,9 +21,10 @@ function draw() {
 		stroke(66,244,194);
 		strokeWeight(5);
 		fill(204,255,204);
-		ellipse(pX, pY + 10, x, y);
+		ellipse(pX/2, pY + 10, x, y);
 		fill(153,255,204);
-		rect(pX, pY, x, y);
+		rect(pX/2, pY, x*2, y);
+		fill(255);
 		pX = x;
 		pY = y;
 	}
