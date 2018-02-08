@@ -12,7 +12,6 @@ function setup() {
 	var c = createCanvas(400, 400);
 	background(212, 216, 215);
 	stroke(20);
-	saveCanvas('myCanvas', 'jpg');
 }
 
 function draw (){
@@ -33,6 +32,24 @@ function draw (){
 	if (mouseIsPressed == true) {
 		line(mouseX, mouseY, pmouseX, pmouseY);
 	} 
+	if (mouseX >= 10 && mouseX <=10+20 && mouseY >= 10 && mouseY <= 10+20)
+	{
+		isOverRectangle = true;
+	} else {
+		isOverRectangle = false;
+	}
+	rectMode(CORNER);
+	stroke(0);
+	strokeWeight(5);
+	if(isOverRectangle == true)
+	{
+		fill(100);
+		cursor(HAND);
+	} else {
+		fill(200);
+		cursor(ARROW);
+	}
+	rect(10,10,20,20);
 }	
 
 function keyPressed() {
@@ -46,13 +63,21 @@ function keyPressed() {
 	  stroke(12, 99, 69);
 	} else if (key == 'w' || key == 'W'){ //white//
 	  stroke(255);
-	} else if (key == 't' || key == 'T'){
+	} else if (key == 't' || key == 'T'){ //thicker stroke//
 	  strokeWeight(2);
-	} else if (key == 'y' || key == 'Y'){
+	} else if (key == 'y' || key == 'Y'){ //thick stroke//
 	  strokeWeight(8);  
-	} else if (key == 'u' || key == 'U'){
+	} else if (key == 'u' || key == 'U'){ //super thick stroke//
 	  strokeWeight(14);   
 	} else if (key == 'x' || key == 'X'){
-		background(212, 216, 215);
+	  background(212, 216, 215);
+	} else if (key == 'q' || key == 'Q'){
+	  saveCanvas(c,'myCanvas', 'jpg');  
+	}
+}
+
+function onClick() {
+	if(isOverRectangle == true) {
+		saveCanvas(c,'myCanvas', 'jpg')
 	}
 }
