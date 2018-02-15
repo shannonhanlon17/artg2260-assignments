@@ -136,7 +136,7 @@ class Fish {
   }
 
   display() {
-    fill(255,0,0);
+    fill(29,12,71);
     rect(this.x, this.y, this.width, this.height);
   }
 
