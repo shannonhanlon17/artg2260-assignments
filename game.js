@@ -1,9 +1,10 @@
 let fish = [];
+/*let monster = [];*/
 let gameState = 0;
 let score = 0;
 let bg;
 let y = 0;
-let Shark = [];
+/*let Shark = [];*/
 
 /*function preload(){
   //fish//
@@ -39,20 +40,28 @@ function draw(){
 function startScreen(){
   background(0,0,255);
   text("Click to Play", 10, 30);
-  spots = [];
+  fish = [];
   for (let i = 0; i < 10; i++){ 
     let x = 20 + 20*i; 
     let rate = 1 + 0.5*i;
     fish[i] = new Fish(x, 50, rate);
    }
+  monster = [];
+  for (let m = 0; m < 10; m){
+    let x = 20;
+    let rate = 2;
+    monster[m] = new Monster(x, 10, rate);
+  }
 }
 
 function update(){
   background(0,0,255);
-  for (let i = 0; i < fish.length; i++){  // Make a for() loop to loop through each Spot 
-    fish[i].move();            // Move each object
-    fish[i].display();         // Display each object
-    fish[i].check();           // Check for mouse overlap
+  for (let i = 0; i < fish.length; i++){   
+    fish[i].move();           
+    fish[i].display();         
+    fish[i].check();
+   /* monster[m].move();
+    monster[m].display();*/        
   }
   score++;
   text("Playing", 10, 30);
@@ -78,6 +87,27 @@ function mouseClicked(){
   constructor(mouseX, mouseY, pmouseX, pmouseY);
   cursor(Shark);
 } */
+/*class Monster {
+  constructor(_x, _y, _speed) {
+    this.x = _x;
+    this.y = _y;
+    this.speed = _speed;
+    this.height = 30;
+    this.width = 40;
+  }
+
+  move() {
+    this.x += this.speed;
+    if ((this.x > (width - this.width/2)) || (this.x < this.height/2)) {
+      this.speed *= 2;
+    }
+  }
+
+  display() {
+    fill(0);
+    rect(this.x, this.y, this.width, this.height);
+  } 
+}*/
 
 class Fish {
   constructor(_x, _y, _speed) {
