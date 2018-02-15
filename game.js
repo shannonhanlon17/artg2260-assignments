@@ -46,12 +46,12 @@ function startScreen(){
     let rate = 1 + 0.5*i;
     fish[i] = new Fish(x, 50, rate);
    }
-  monster = [];
+ /* monster = [];
   for (let m = 0; m < 10; m){
     let x = 20;
     let rate = 2;
     monster[m] = new Monster(x, 10, rate);
-  }
+  }*/
 }
 
 function update(){
