@@ -39,7 +39,7 @@ function draw(){
 
 function startScreen(){
   background(0,0,255);
-  text("Click to Swim", 10, 30);
+  text("Click to Swim", 158, 180);
   fish = [];
   for (let i = 0; i < 10; i++){ 
     let x = 20 + 80*i; 
