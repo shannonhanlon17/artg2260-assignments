@@ -64,8 +64,8 @@ function update(){
     monster[m].display();*/        
   }
   score++;
-  text("Playing", 10, 30);
-  text("Score: " + score, 10, 90);
+  text("Playing", 10, 15);
+  text("Score: " + score, 170, 15);
 }
 
 function gameOver(){
