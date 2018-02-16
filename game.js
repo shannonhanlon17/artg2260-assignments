@@ -70,9 +70,9 @@ function update(){
 
 function gameOver(){
   background(0,0,255);
-  text("Game Over", 10, 30);
+  text("Game Over", 170, 380);
   stroke(255,0,0);
-  text("Score: " + score, 10, 90);
+  text("Score: " + score, 170, 15);
 }
 
 function mouseClicked(){
