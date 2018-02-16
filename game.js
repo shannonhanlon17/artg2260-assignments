@@ -42,7 +42,7 @@ function startScreen(){
   text("Click to Swim", 10, 30);
   fish = [];
   for (let i = 0; i < 10; i++){ 
-    let x = 20 + 100*i; 
+    let x = 20 + 80*i; 
     let rate = 1 + 0.5*i;
     fish[i] = new Fish(x, 10, rate);
    }
@@ -127,7 +127,7 @@ class Fish {
       this.speed *= +1;
     }
     this.y += this.speed;
-    this.y = y + random(-20, 20);
+    this.y = y + random(-10, 10);
     if ((this.y > (height - this.width/2)) || (this.y < this.height/2)) {
       this.speed *= -1;
     }
