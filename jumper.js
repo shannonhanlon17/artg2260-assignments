@@ -1,9 +1,10 @@
 let platform = [];
-let player = [];
+let player;
 let gameState = 0;    // this is the value we'll toggle to change the game states
 
 function setup(){
  createCanvas(500,500);
+
  framerate = 20;
 }
 
@@ -16,6 +17,7 @@ function draw(){
   } else if (gameState == 2){
     gameOver();
   }
+  player = new Player();
 }
 
 function startScreen(){
@@ -27,7 +29,6 @@ function startScreen(){
   	let rate = 0.5 + 0.5*i;
   	platform[i] = new Platform(x, random(400), rate);
   }
-  player = [];
 }
 
 function update(){
@@ -37,8 +38,8 @@ function update(){
   	platform[i].display();
   	platform[i].regenerate();
   	/*platform[i].check();*/
-  	/*player.move();*/
-  	/*player.display();*/
+  	player.move();
+  	player.display();
   }	
   text("Playing", 10, 30);
 }
@@ -92,9 +93,9 @@ class Player {
 	constructor(_x, _y, r) {
 		this.x = _x;
 		this.y = _y;
-		this.xVel = _xVel;
+		/*this.xVel = _xVel;
 		this.yVel = _yVel;
-		this.r = _r;
+		this.r = _r;*/
 		this.diameter = 30;
 		this.gravity = 0.1;
 	}
