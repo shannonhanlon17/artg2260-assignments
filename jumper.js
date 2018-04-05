@@ -21,7 +21,7 @@ function draw(){
 
 function startScreen(){
   background(111, 178, 237);
-  text("Click to Begin", 10, 30);
+  text("Click to Begin", 200, 250);
   platform = [];
   for (let i = 0; i < 5; i++){
   	let x = 10 + 20*i;
@@ -34,7 +34,9 @@ function startScreen(){
 function update(){
   background(111, 178, 237);
   player.move();
+  fill(244, 66, 122);
   player.display();
+  fill(104, 70, 80);
   for (let i = 0; i < platform.length; i++){
   	platform[i].move();
   	platform[i].display();
@@ -42,8 +44,9 @@ function update(){
   	/*platform[i].check();*/
   }	
   score++;
+  fill(255);
   text("Playing", 10, 30);
-  text("Score: " + score, 430, 30);
+  text("Score: " + score, 425, 30);
 }
 
 function gameOver(){
@@ -107,10 +110,15 @@ class Player {
 		this.x += this.xVel;
 	}
 	display() {
-		ellipse(this.x, this.y, this.diameter, this.diameter)
+		ellipse(250, 485, this.diameter, this.diameter)
 	}
 }
-
+class Goal {
+	constructor(_x, _y) {
+		this.x = _x;
+		this.y = _y;
+	}
+}
 
 
 

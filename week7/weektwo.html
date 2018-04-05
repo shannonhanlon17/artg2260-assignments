@@ -1,0 +1,40 @@
+<!-- Shannon Hanlon
+shannonhanlon17@gmail.com
+Assignment 0
+Start to My Website -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ARTG2260 Assignments</title>
+
+  <script src="a10.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+
+</head>
+<body>
+<script>
+
+  let data;
+
+  function preload() {
+    data = loadJSON('assets/characters.json');
+  }
+  function setup() {
+    for (let i = 0; i < data.characters.length; i++){
+      print(data.characters[i]);
+    }
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
